@@ -84,18 +84,18 @@ const ejecutarOperacionRemotoGet = (num1, op, num2, tagResultado) => {
 const ejecutarOperacionRemotoPost = async (num1, op, num2, tagResultado) => {
     const url = 'api/calculator';
 
-    const request = {
+    const request = { // en javascript es una objeto todo elemento encerrado por {}
         "num1": num1,
         "op": op,
         "num2": num2
-    };
+    }; //body request, Cuerpo del mensaje
 
     let response = await fetch(url, { //await es para esperr a una promesa
-        method: 'POST',
+        method: 'POST', //se manda el metodo post osea desde la consola
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },
-        body: JSON.stringify(request)
+        body: JSON.stringify(request) //convierte a cadena al json
     });
 
     if (response.ok) {
@@ -130,5 +130,4 @@ const ejecutarOperacionLocal = (num1, op, num2, tagResultado) => {
     tagResultado.innerHTML = resultado;
 }
 
-abrirCalculadora();
 
