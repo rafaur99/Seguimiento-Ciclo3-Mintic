@@ -9,5 +9,5 @@ public class VideotiendaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VideotiendaApplication.class, args);
 	}
-
 }
+// agrega dependencias y configuraciones iniciales de mi proyecto
